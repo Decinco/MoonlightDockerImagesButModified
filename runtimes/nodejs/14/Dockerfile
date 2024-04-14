@@ -11,5 +11,5 @@ USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
-COPY        MoonlightDockerImages/runtimes/nodejs/entrypoint.sh /entrypoint.sh
+COPY        ./runtimes/nodejs/entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
