@@ -9,7 +9,7 @@ RUN         apt update \
 
 USER        container
 ENV         USER=container HOME=/home/container
-WORKDIR     /home/container
+WORKDIR /home/container
 
-COPY        ./runtimes/nodejs/entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/bash", "/entrypoint.sh" ]
+COPY runtimes/nodejs/entrypoint.sh /entrypoint.sh
+CMD [ "/bin/bash", "/entrypoint.sh" ]
