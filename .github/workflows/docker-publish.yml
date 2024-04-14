@@ -69,7 +69,7 @@ jobs:
           context: runtimes/nodejs/14
           cache-from: type=gha
           cache-to: type=gha
-          push: type=regestry
+          push: false
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
