@@ -70,7 +70,7 @@ jobs:
         with:
           context: runtimes/nodejs/14
           push: ${{ github.event_name != 'pull_request' }}
-          tags: tns/moonlight/nodejs:14
+          tags: TNSStudio-HQ/MoonlightDockerImages/nodejs:14
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
