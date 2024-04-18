@@ -8,9 +8,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - dev/nodejs/*
-
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
