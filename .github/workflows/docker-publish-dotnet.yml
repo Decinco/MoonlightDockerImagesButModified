@@ -49,7 +49,7 @@ jobs:
       
       - uses: docker/build-push-action@v5
         with:
-          context: runtimes/dotnet/${{ matrix.tag }}
+          context: runtimes/dotnet
           file: runtimes/dotnet/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
