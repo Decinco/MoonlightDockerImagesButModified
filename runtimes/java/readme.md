@@ -11,3 +11,9 @@ Here are all Java Moonlight Images Saved.
 - [20](/runtimes/java/20/Dockerfile)
 - [21](/runtimes/java/21/Dockerfile)
 - [22](/runtimes/java/22/Dockerfile)
+
+
+> Java Image by [Moritz](https://mxritz.xyz/)<br />
+> Copyright (c) https://github.com/Moritz-Deiaco/MoonlightDockerImages - MIT LICENSE
+
+
