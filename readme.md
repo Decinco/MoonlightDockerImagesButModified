@@ -14,3 +14,6 @@ Here you can find all Images from Us.
 |  Name | Github  |  Website |
 |-------|---------|----------|
 |  Moritz |  [Moritz-Deiaco](https://github.com/Moritz-Deiaco) | https://mxritz.xyz/  |  
+
+
+> Join our Discord: https://discord.gg/DpSCzxa4EN
