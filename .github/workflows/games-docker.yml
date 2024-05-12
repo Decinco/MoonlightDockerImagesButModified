@@ -55,4 +55,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/tnsstudio-hq/moonlightdockerimages:games${{ matrix.tag }}
+            ghcr.io/tnsstudio-hq/moonlightdockerimages:${{ matrix.tag }}
