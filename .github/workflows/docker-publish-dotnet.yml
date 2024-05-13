@@ -1,7 +1,3 @@
-#
-#  Copyright (c) https://github.com/gOOvER/own-pterodactyl-images/blob/main/LICENSE
-#
-
 name: Build Docker Image
 
 on:
