@@ -9,7 +9,7 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/games-docker.yml
+      - .github/workflows/docker-other.yml
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
