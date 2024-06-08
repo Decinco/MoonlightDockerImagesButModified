@@ -15,7 +15,7 @@ env:
 
 jobs:
   push:
-    name: "dotnet:${{ matrix.tag }}"
+    name: "other:${{ matrix.tag }}"
     runs-on: ubuntu-latest
     permissions:
       contents: read
