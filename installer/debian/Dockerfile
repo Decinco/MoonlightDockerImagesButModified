@@ -1,4 +1,4 @@
-FROM 		--platform=$TARGETOS/$TARGETARCH debain:latest
+FROM 		--platform=$TARGETOS/$TARGETARCH debain:bookworm-slim
 
 ENV         DEBIAN_FRONTEND noninteractive
 
