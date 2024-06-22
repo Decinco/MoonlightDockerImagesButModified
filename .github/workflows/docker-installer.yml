@@ -29,7 +29,6 @@ jobs:
       matrix:
         tag:
           - debian
-          - nginx
     
     steps:
       - uses: actions/checkout@v4
