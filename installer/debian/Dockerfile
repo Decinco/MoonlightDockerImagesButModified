@@ -1,4 +1,4 @@
-FROM 		--platform=$TARGETOS/$TARGETARCH debain:bookworm-slim
+FROM 		--platform=$TARGETOS/$TARGETARCH debian:bookworm-slim
 
 ENV         DEBIAN_FRONTEND noninteractive
 
