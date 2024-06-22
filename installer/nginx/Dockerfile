@@ -1,4 +1,4 @@
-FROM 		--platform=$TARGETOS/$TARGETARCH lscr.io/linuxserver/nginx:latest
+FROM 		--platform=$TARGETOS/$TARGETARCH debian:bookworm-slim
 
 ENV         DEBIAN_FRONTEND noninteractive
 
