@@ -46,8 +46,8 @@ jobs:
       
       - uses: docker/build-push-action@v5
         with:
-          context: installers/${{ matrix.tag }}
-          file: installers/${{ matrix.tag }}/Dockerfile
+          context: installer/${{ matrix.tag }}
+          file: installer/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
