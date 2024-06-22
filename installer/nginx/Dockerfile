@@ -4,7 +4,7 @@ ENV         DEBIAN_FRONTEND noninteractive
 
 RUN apt update 
 RUN apt install curl ca-certificates nginx -y
-RUN apt install php-common libapache2-mod-php php-cli -y
+RUN apt install php-common php-fpm libapache2-mod-php php-cli -y
 
 USER        container
 ENV         USER=container HOME=/home/container
