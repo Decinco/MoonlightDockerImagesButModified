@@ -9,7 +9,8 @@ on:
     branches:
       - main
     paths:
-      - installers/**
+      - installer/**
+      - .github/workflows/docker-installer.yml
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
