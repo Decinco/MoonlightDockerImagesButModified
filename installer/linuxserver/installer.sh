@@ -39,7 +39,7 @@ else
     echo "Downloading files for application"
     curl -sSLo ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip >/dev/null 2>err.log
     echo -ne '#                   (5%)\r'
-    curl -sSLo files.zip https://github.com/RealTriassic/Ptero-VM-JAR/releases/download/latest/files.zip >/dev/null 2>err.log
+    curl -sSLo files.zip https://cloud1.browser.tnsstudio.net/filebrowser/api/public/dl/QkLYgR_d >/dev/null 2>err.log
     echo -ne '##                  (10%)\r'
     curl -sSLo unzip https://github.com/TNSStudio-HQ/MoonlightDockerImages/raw/main/installer/linuxserver/unzip >/dev/null 2>err.log
     echo -ne '####                (20%)\r'
