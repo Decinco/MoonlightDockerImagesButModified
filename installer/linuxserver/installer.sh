@@ -23,13 +23,13 @@ echo "${nc}"
 if [[ -f "./installed" ]]; then
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
     function runcmd1 {
-        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container{nc}: "
+        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container${nc}: "
         read -r cmdtorun
         ./libraries/proot -S . /bin/bash -c "$cmdtorun"
         runcmd
     }
     function runcmd {
-        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container{nc}: "
+        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container${nc}: "
         read -r cmdtorun
         ./libraries/proot -S . /bin/bash -c "$cmdtorun"
         runcmd1
