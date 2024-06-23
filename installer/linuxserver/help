@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# Check if the correct number of arguments is provided
+if [ "$#" -lt 2 ]; then
+    echo "Welcome to the Linux Server"
+    echo ""
+    echo "Run Command in the Console to install/use the Linux Server"
+    echo "Or do what ever you want..."
+    echo "This Server use Debian and Python to run. "
+    echo "Credits(Discord): moritzwastaken, tnsjesper"
+    exit 1
+fi
