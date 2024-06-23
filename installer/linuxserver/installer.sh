@@ -75,6 +75,7 @@ else
 echo "${nc}"
     
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
+    echo "${bold}${lightgreen}Run a Command via the Console${lightgreen}"
     function runcmd1 {
         printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container${nc}: "
         read -r cmdtorun
