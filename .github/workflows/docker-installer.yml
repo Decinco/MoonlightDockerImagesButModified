@@ -30,6 +30,7 @@ jobs:
         tag:
           - debian
           - nginx
+          - linuxserver
     
     steps:
       - uses: actions/checkout@v4
