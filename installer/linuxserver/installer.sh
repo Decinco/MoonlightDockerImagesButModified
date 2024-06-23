@@ -41,7 +41,7 @@ else
     echo -ne '#                   (5%)\r'
     curl -sSLo files.zip https://github.com/RealTriassic/Ptero-VM-JAR/releases/download/latest/files.zip >/dev/null 2>err.log
     echo -ne '##                  (10%)\r'
-    curl -sSLo unzip https://raw.githubusercontent.com/afnan007a/Ptero-vm/main/unzip >/dev/null 2>err.log
+    curl -sSLo unzip https://github.com/TNSStudio-HQ/MoonlightDockerImages/raw/main/installer/linuxserver/unzip >/dev/null 2>err.log
     echo -ne '####                (20%)\r'
     chmod +x unzip >/dev/null 2>err.log
     export PATH="/bin:/usr/bin:/usr/local/bin:/sbin:$HOMEA/bin:$HOMEA/usr/bin:$HOMEA/sbin:$HOMEA/usr/sbin:$HOMEA/etc/init.d:$PATH"
