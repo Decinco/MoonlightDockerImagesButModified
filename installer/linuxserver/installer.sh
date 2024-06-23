@@ -21,15 +21,15 @@ lightgreen=$(echo -en "\e[92m")
 echo "${nc}"
 
 if [[ -f "./installed" ]]; then
-    echo "${bold}${lightgreen}==> Started ${lightblue}Container${lightgreen} <=="
+    echo "${bold}${lightgreen}Container is now ready${lightgreen}"
     function runcmd1 {
-        printf "${bold}${lightgreen}Default${nc}@${lightblue}Container${nc}:~ "
+        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container{nc}: "
         read -r cmdtorun
         ./libraries/proot -S . /bin/bash -c "$cmdtorun"
         runcmd
     }
     function runcmd {
-        printf "${bold}${lightgreen}Default${nc}@${lightblue}Container${nc}:~ "
+        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container{nc}: "
         read -r cmdtorun
         ./libraries/proot -S . /bin/bash -c "$cmdtorun"
         runcmd1
@@ -75,15 +75,15 @@ else
     
 echo "${nc}"
     
-    echo "${bold}${lightgreen}==> Started ${lightblue}Container${lightgreen} <=="
+    echo "${bold}${lightgreen}Container is now ready${lightgreen}"
     function runcmd1 {
-        printf "${bold}${lightgreen}Default${nc}@${lightblue}Container${nc}:~ "
+        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container${nc}: "
         read -r cmdtorun
         ./libraries/proot -S . /bin/bash -c "$cmdtorun"
         runcmd
     }
     function runcmd {
-        printf "${bold}${lightgreen}Default${nc}@${lightblue}Container${nc}:~ "
+        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container${nc}: "
         read -r cmdtorun
         ./libraries/proot -S . /bin/bash -c "$cmdtorun"
         runcmd1
