@@ -63,11 +63,8 @@ else
     rm -rf root.tar.gz >/dev/null 2>err.log
     rm -rf ngrok.zip >/dev/null 2>err.log
     echo -ne '############         (60%)\r'
-    curl -sSLo help https://github.com/TNSStudio-HQ/MoonlightDockerImages/raw/main/installer/linuxserver/help >/dev/null 2>err.log
-    cp /home/container/help /usr/local/bin/help
-    echo -ne '################     (70%)\r'
     cmds=("mv unzip /usr/bin/" "mv ngrok /usr/bin/" "apt-get update" "apt-get -y upgrade" "apt-get -y install sudo curl wget hwloc htop nano neofetch python3" "curl -o /bin/systemctl https://github.com/TNSStudio-HQ/MoonlightDockerImages/raw/main/installer/linuxserver/systemctl3.py")
-
+    echo -ne '################     (70%)\r'
     for cmd in "${cmds[@]}"; do
         ./libraries/proot -S . /bin/bash -c "$cmd >/dev/null 2>err.log"
     done
