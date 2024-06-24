@@ -22,18 +22,7 @@ echo "${nc}"
 
 if [[ -f "./installed" ]]; then
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
-    function runcmd1 {
-        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container${nc}: "
-        read -r cmdtorun
-        ./libraries/proot -S . /bin/bash -c "$cmdtorun"
-        runcmd
-    }
-    function runcmd {
-        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container${nc}: "
-        read -r cmdtorun
-        ./libraries/proot -S . /bin/bash -c "$cmdtorun"
-        runcmd1
-    }
+    echo "    Starting WebConsole - Port: {SERVER_PORT}"
     gotty --port {SERVER_PORT} --credential root:{PASSWORD} --permit-write --permit-arguments --title-format "WebConsole - Moonlight" bash
 else
     echo "Downloading files for application"
@@ -78,18 +67,7 @@ else
 echo "${nc}"
     
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
-    echo "${bold}${lightgreen}Run a Command via the Console${lightgreen}"
-    function runcmd1 {
-        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container${nc}: "
-        read -r cmdtorun
-        ./libraries/proot -S . /bin/bash -c "$cmdtorun"
-        runcmd
-    }
-    function runcmd {
-        printf "${bold}${lightgreen}moonlight${nc}@${lightblue}container${nc}: "
-        read -r cmdtorun
-        ./libraries/proot -S . /bin/bash -c "$cmdtorun"
-        runcmd1
-    }
-    runcmd
+    echo "    Starting WebConsole - Port: {SERVER_PORT}"
+    gotty --port {SERVER_PORT} --credential root:{PASSWORD} --permit-write --permit-arguments --title-format "WebConsole - Moonlight" bash
+    gotty --port 2013 --credential root:test2 --permit-write --permit-arguments --title-format "WebConsole - Moonlight" bash
 fi
