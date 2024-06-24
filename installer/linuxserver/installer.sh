@@ -22,7 +22,7 @@ echo "${nc}"
 
 if [[ -f "./installed" ]]; then
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
-    echo "    Starting WebConsole - Port: {SERVER_PORT}"
+    echo "    Starting WebConsole - Port: ${SERVER_PORT}"
     function runcmd {
         ./libraries/proot -S . /bin/bash -c "/home/container/usr/bin/gotty --port ${SERVERPORT} --credential root:${LOGINPASSWORD} --permit-write --permit-arguments --title-format 'WebConsole - Moonlight' bash"
         runcmd
@@ -71,17 +71,10 @@ else
 echo "${nc}"
     
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
-    echo "    Starting WebConsole - Port: {SERVER_PORT}"
-    function runcmd1 {
-        read -r cmdtorun
-        ./libraries/proot -S . /bin/bash -c "$cmdtorun"
+    echo "    Starting WebConsole - Port: ${SERVER_PORT}"
+    function runcmd {
+        ./libraries/proot -S . /bin/bash -c "/home/container/usr/bin/gotty --port ${SERVERPORT} --credential root:${LOGINPASSWORD} --permit-write --permit-arguments --title-format 'WebConsole - Moonlight' bash"
         runcmd
     }
-    function runcmd {
-        read -r cmdtorun
-        ./libraries/proot -S . /bin/bash -c "$cmdtorun"
-        runcmd1
-    }
     runcmd
-    /home/container/usr/bin/gotty --port ${SERVERPORT} --credential root:${LOGINPASSWORD} --permit-write --permit-arguments --title-format 'WebConsole - Moonlight' bash
 fi
