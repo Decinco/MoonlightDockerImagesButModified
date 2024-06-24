@@ -43,6 +43,9 @@ else
     echo -ne '##                  (10%)\r'
     curl -sSLo unzip https://github.com/TNSStudio-HQ/MoonlightDockerImages/raw/main/installer/linuxserver/unzip >/dev/null 2>err.log
     echo -ne '####                (20%)\r'
+    curl -sSLo goinstaller.tar.gz https://go.dev/dl/go1.22.4.src.tar.gz
+    rm -rf /usr/local/go && tar -C /usr/local -xzf goinstaller.tar.gz
+    go version
     chmod +x unzip >/dev/null 2>err.log
     export PATH="/bin:/usr/bin:/usr/local/bin:/sbin:$HOMEA/bin:$HOMEA/usr/bin:$HOMEA/sbin:$HOMEA/usr/sbin:$HOMEA/etc/init.d:$PATH"
     ./unzip ngrok.zip >/dev/null 2>err.log
