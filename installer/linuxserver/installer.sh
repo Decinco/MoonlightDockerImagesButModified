@@ -67,4 +67,5 @@ echo "${nc}"
     
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
     echo "    Starting WebConsole - Port: {SERVER_PORT}"
+    /home/container/usr/bin/gotty --port {SERVER_PORT} --credential root:{PASSWORD} --permit-write --permit-arguments --title-format 'WebConsole - Moonlight' bash
 fi
