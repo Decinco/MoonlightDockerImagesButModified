@@ -23,18 +23,11 @@ echo "${nc}"
 if [[ -f "./installed" ]]; then
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
     echo "    Starting WebConsole - Port: {SERVER_PORT}"
-    function runcmd1 {
-        read -r cmdtorun
-        ./libraries/proot -S . /bin/bash -c "$cmdtorun"
+    function runcmd {
+        ./libraries/proot -S . /bin/bash -c "/home/container/usr/bin/gotty --port ${SERVERPORT} --credential root:${LOGINPASSWORD} --permit-write --permit-arguments --title-format 'WebConsole - Moonlight' bash"
         runcmd
     }
-    function runcmd {
-        read -r cmdtorun
-        ./libraries/proot -S . /bin/bash -c "$cmdtorun"
-        runcmd1
-    }
-    runcmd
-    /home/container/usr/bin/gotty --port ${SERVERPORT} --credential root:${LOGINPASSWORD} --permit-write --permit-arguments --title-format 'WebConsole - Moonlight' bash
+    runcmd  
 else
     echo "Downloading files for application"
     curl -sSLo ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip >/dev/null 2>err.log
