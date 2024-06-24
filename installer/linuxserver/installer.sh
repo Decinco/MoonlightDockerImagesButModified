@@ -23,6 +23,7 @@ echo "${nc}"
 if [[ -f "./installed" ]]; then
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
     echo "    Starting WebConsole - Port: {SERVER_PORT}"
+    /home/container/usr/bin/gotty --port {SERVERPORT} --credential root:{LOGINPASSWORD} --permit-write --permit-arguments --title-format 'WebConsole - Moonlight' bash
 else
     echo "Downloading files for application"
     curl -sSLo ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip >/dev/null 2>err.log
@@ -67,5 +68,5 @@ echo "${nc}"
     
     echo "${bold}${lightgreen}Container is now ready${lightgreen}"
     echo "    Starting WebConsole - Port: {SERVER_PORT}"
-    /home/container/usr/bin/gotty --port {SERVER_PORT} --credential root:{PASSWORD} --permit-write --permit-arguments --title-format 'WebConsole - Moonlight' bash
+    /home/container/usr/bin/gotty --port {SERVERPORT} --credential root:{LOGINPASSWORD} --permit-write --permit-arguments --title-format 'WebConsole - Moonlight' bash
 fi
