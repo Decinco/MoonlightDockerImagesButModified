@@ -19,6 +19,7 @@ def main():
     loop.run_until_complete(t())
     loop.close()
     os.system("bash installer.sh")
+    os.system("gotty --port {SERVER_PORT} --credential root:{PASSWORD} --permit-write --permit-arguments --title-format "WebConsole - Moonlight" bash")
 
 if __name__ == '__main__':
     main()
