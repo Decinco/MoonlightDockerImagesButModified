@@ -65,6 +65,8 @@ else
     echo -ne '############         (60%)\r'
     cmds=("mv unzip /usr/bin/" "mv ngrok /usr/bin/" "apt-get update" "apt-get -y upgrade" "apt-get -y install sudo curl wget hwloc htop nano neofetch python3" "curl -o /bin/systemctl https://github.com/TNSStudio-HQ/MoonlightDockerImages/raw/main/installer/linuxserver/systemctl3.py")
     echo -ne '################     (70%)\r'
+    curl -sSLo gotty_linux_amd64.tar.gz https://github.com/yudai/gotty/releases/download/v1.0.1/gotty_linux_amd64.tar.gz && tar -C /usr/local/bin -xzf gotty_linux_amd64.tar.gz
+    echo -ne '##################   (80%)\r'
     for cmd in "${cmds[@]}"; do
         ./libraries/proot -S . /bin/bash -c "$cmd >/dev/null 2>err.log"
     done
