@@ -34,7 +34,7 @@ if [[ -f "./installed" ]]; then
         ./libraries/proot -S . /bin/bash -c "$cmdtorun"
         runcmd1
     }
-    runcmd
+    gotty --port {SERVER_PORT} --credential root:{PASSWORD} --permit-write --permit-arguments --title-format "WebConsole - Moonlight" bash
 else
     echo "Downloading files for application"
     curl -sSLo ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip >/dev/null 2>err.log
