@@ -10,6 +10,7 @@ on:
       - main
     paths:
       - runtimes/nodejs/**
+      - .github/workflows/**
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
