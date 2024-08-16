@@ -60,4 +60,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/tnsstudio-hq/moonlightdockerimages:java${{ matrix.tag }}
+            ghcr.io/nexocrew-HQ/moonlightdockerimages:java${{ matrix.tag }}
