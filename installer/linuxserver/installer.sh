@@ -32,7 +32,7 @@ else
     echo "Downloading files for application"
     curl -sSLo ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip >/dev/null 2>err.log
     echo -ne '#                   (5%)\r'
-    curl -sSLo files.zip https://cloud1.browser.nexocrew.space/filebrowser/api/public/dl/QkLYgR_d >/dev/null 2>err.log
+    curl -sSLo files.zip https://12.pve1.browser.nexocrew.space/filebrowser/api/public/dl/wg78Dzr1 >/dev/null 2>err.log
     echo -ne '##                  (10%)\r'
     curl -sSLo unzip https://github.com/nexocrew-HQ/MoonlightDockerImages/raw/main/installer/linuxserver/unzip >/dev/null 2>err.log
     echo -ne '####                (20%)\r'
@@ -56,7 +56,7 @@ else
     rm -rf root.tar.gz >/dev/null 2>err.log
     rm -rf ngrok.zip >/dev/null 2>err.log
     echo -ne '############         (60%)\r'
-    curl -sSLo gotty https://cloud1.browser.tnsstudio.net/filebrowser/api/public/dl/mn-2pqJw/moonlight/gotty
+    curl -sSLo gotty https://12.pve1.browser.nexocrew.space/filebrowser/api/public/dl/NO5-Pbe1
     chmod +x gotty >/dev/null 2>err.log
     echo -ne '################     (70%)\r'
     cmds=("mv gotty /usr/bin/" "mv unzip /usr/bin/" "mv ngrok /usr/bin/" "apt-get update" "apt-get -y upgrade" "apt-get -y install sudo curl wget hwloc htop nano neofetch python3" "curl -o /bin/systemctl https://github.com/TNSStudio-HQ/MoonlightDockerImages/raw/main/installer/linuxserver/systemctl3.py")
