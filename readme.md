@@ -14,7 +14,7 @@ Here you can find all Images from Us.
 **Credits to**: 
 |  Name | Github  |  Website |
 |-------|---------|----------|
-|  Moritz |  [Moritz-Deiaco](https://github.com/Moritz-Deiaco) | https://mxritz.xyz/  |  
+|  Moritz |  [mxritzdev](https://github.com/mxritzdev) | https://mxritz.xyz/  |  
 |  Linuxserver.io | [LinuxServer.io](https://github.com/linuxserver) | https://linuxserver.io |  
 
 <br>
