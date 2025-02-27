@@ -1,8 +1,6 @@
 # MoonlightDocker Images
 
-Hello and Welcome!<br>
-TNSStudio is Creation for moonlight Docker Images!<br>
-Here you can find all Images from Us.
+Our docker images for the Moonlight panel 
 
 > - [NodeJS](/runtimes/nodejs/readme.md)
 > - [DotNet](/runtimes/dotnet/readme.md)
