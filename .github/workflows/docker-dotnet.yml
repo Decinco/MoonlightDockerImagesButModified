@@ -55,4 +55,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/nexocrew-hq/moonlightdockerimages:dotnet${{ matrix.tag }}
+            ghcr.io/xyzspace-dev/moonlightdockerimages:dotnet${{ matrix.tag }}
