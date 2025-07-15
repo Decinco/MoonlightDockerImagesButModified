@@ -17,5 +17,4 @@ Our docker images for the Moonlight panel
 
 <br>
 
-> Join our Discord: https://discord.gg/DpSCzxa4EN<br>
 > Moonlight Discord: https://discord.gg/3r9JPbgenb
