@@ -47,8 +47,8 @@ jobs:
       
       - uses: docker/build-push-action@v5
         with:
-          context: runtimes/nodejs/${{ matrix.tag }}
-          file: runtimes/nodejs/${{ matrix.tag }}/Dockerfile
+          context: runtimes/bun/${{ matrix.tag }}
+          file: runtimes/bun/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
