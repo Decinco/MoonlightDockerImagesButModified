@@ -4,14 +4,15 @@ LABEL       author="Jesper Richert" maintainer="contact@tnsstudio.net"
 
 ENV         DEBIAN_FRONTEND noninteractive
 
-RUN        apt update -y \
+RUN         apt update -y \
     && apt upgrade -y \
     && apt install -y apt-transport-https wget curl iproute2 libgdiplus tini \
     && wget https://dot.net/v1/dotnet-install.sh \
     && chmod +x dotnet-install.sh \
-    && DOTNET_VERSION=$(curl -sSL https://dotnet.microsoft.com/en-us/download/dotnet/8.0 | grep -oP 'SDK 8\.\d+\.\d+' | head -1 | awk '{print $2}') \
-    && ./dotnet-install.sh -i /usr/share -v "$DOTNET_VERSION" \
+    && DOTNET_VERSION=$(curl -sSL https://dotnet.microsoft.com/en-us/download/dotnet/9.0 | grep -oP 'SDK 9\.\d+\.\d+' | head -1 | awk '{print $2}') \
+    && ./dotnet-install.sh -i /usr/share -v "$DOTNET_VERSION" --channel 9.0.0-preview \
     && ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
+
 
 USER        container
 ENV         USER=container HOME=/home/container
