@@ -1,4 +1,4 @@
-name: Build Docker Image
+name: Node.js  Docker Image
 
 on:
   # Allows you to run this workflow manually from the Actions tab

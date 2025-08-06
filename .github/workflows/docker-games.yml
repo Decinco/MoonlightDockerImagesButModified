@@ -1,4 +1,4 @@
-name: Build Docker Image
+name: Game  Docker Images
 
 on:
   # Allows you to run this workflow manually from the Actions tab
