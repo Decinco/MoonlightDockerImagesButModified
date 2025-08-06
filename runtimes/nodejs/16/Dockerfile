@@ -1,6 +1,6 @@
 FROM --platform=$TARGETOS/$TARGETARCH node:16-bullseye-slim
 
-LABEL       author="Jesper Richert" maintainer="contact@tnsjesper.xyz"
+LABEL       author="Jesper Richert" maintainer="dm@xyzjesper.dev"
 
 RUN         apt update \
     && apt -y install ffmpeg iproute2 git libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool \

@@ -1,4 +1,4 @@
-FROM --platform=$TARGETOS/$TARGETARCH node:14-bullseye-slim
+FROM --platform=$TARGETOS/$TARGETARCH oven/bun:1.2.19-debian
 
 LABEL       author="Jesper Richert" maintainer="dm@xyzjesper.dev"
 

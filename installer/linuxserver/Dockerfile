@@ -1,6 +1,6 @@
 FROM        python:3.11-slim
 
-LABEL       author="Jesper Richert" maintainer="contact@tnsjesper.xyz"
+LABEL       author="Jesper Richert" maintainer="dm@xyzjesper.dev"
 
 RUN         apt update \
             && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \

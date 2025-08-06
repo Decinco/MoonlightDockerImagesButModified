@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:18-jdk-jammy
 
-LABEL   	author="Jesper Richert" maintainer="contact@tnsjesper.xyz"
+LABEL   	author="Jesper Richert" maintainer="dm@xyzjesper.dev"
 
 RUN 		apt update -y \
 			&& apt -y upgrade

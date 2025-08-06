@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:22-jdk-jammy
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:24-jdk-jammy
 
 LABEL   	author="Jesper Richert" maintainer="dm@xyzjesper.dev"
 

@@ -9,7 +9,7 @@ on:
     branches:
       - main
     paths:
-      - runtimes/nodejs/**
+      - runtimes/bun/**
       - .github/workflows/**
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -28,16 +28,7 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - 14
-          - 16
-          - 17
-          - 18
-          - 19
-          - 20
-          - 21
-          - 22
-          - 23
-          - 24
+          - 1.2.19
     
     steps:
       - uses: actions/checkout@v4
@@ -61,4 +52,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/xyzspace-dev/moonlightdockerimages:nodejs${{ matrix.tag }}
+            ghcr.io/xyzspace-dev/moonlightdockerimages:bun${{ matrix.tag }}
