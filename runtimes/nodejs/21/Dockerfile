@@ -2,10 +2,24 @@ FROM --platform=$TARGETOS/$TARGETARCH node:21-bullseye-slim
 
 LABEL       author="Jesper Richert" maintainer="dm@xyzjesper.dev"
 
-RUN         apt update \
-    && apt -y install ffmpeg iproute2 git libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool \
-    && npm -g install npm@latest \
-    && useradd -m -d /home/container container
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ffmpeg \
+        iproute2 \
+        git \
+        libsqlite3-dev \
+        python3 \
+        python3-dev \
+        ca-certificates \
+        dnsutils \
+        tzdata \
+        zip \
+        tar \
+        curl \
+        build-essential \
+        libtool && \
+    npm install -g npm@latest && \
+    rm -rf /var/lib/apt/lists/*
 
 USER        container
 ENV         USER=container HOME=/home/container
