@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:17-jdk-jammy
+FROM        --platform=$TARGETOS/$TARGETARCH debian:latest
 
 LABEL   	author="Jesper Richert" maintainer="dm@xyzjesper.dev"
 
@@ -6,6 +6,7 @@ RUN 		apt update -y \
 			&& apt -y upgrade
 
 RUN  		apt install -y \
+				temurin-17-jdk \
 				curl \
 				git \
 				iproute2 \
