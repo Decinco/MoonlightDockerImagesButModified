@@ -29,17 +29,9 @@ jobs:
       matrix:
         tag:
           - 8
-          - 11
-          - 11
           - 16
           - 17
-          - 18
-          - 19
-          - 20
           - 21
-          - 22
-          - 23
-          - 24
     
     steps:
       - uses: actions/checkout@v4
@@ -63,4 +55,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/xyzspace-dev/moonlightdockerimages:java${{ matrix.tag }}
+            ghcr.io/decinco/slightlydifferentmoonlightdockerimages:java${{ matrix.tag }}

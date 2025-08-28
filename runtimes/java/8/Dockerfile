@@ -13,7 +13,8 @@ RUN  		apt install -y \
 				sqlite3 \
 				tar \
 				tzdata \
-				libfreetype6
+				libfreetype6 \
+				nginx
 
 RUN     	useradd -m -d /home/container -s /bin/bash container
 USER    	container
